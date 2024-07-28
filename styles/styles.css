@@ -199,7 +199,7 @@ a {
   line-height: 1;
   padding-block: 12px;
 }
-.header__top-menu, .header__top-navigation {
+.header__top-inner, .header__top-menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;

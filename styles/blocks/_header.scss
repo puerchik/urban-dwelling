@@ -6,8 +6,8 @@
   line-height: 1;
   padding-block: 12px;
 
-  &-menu,
-  &-navigation {
+  &-inner,
+  &-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
