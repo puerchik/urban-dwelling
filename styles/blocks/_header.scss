@@ -1,0 +1,47 @@
+.header__top {
+  background-color: var(--color-dark-alt);
+  color: var(--color-light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  padding-block: 12px;
+
+  &-menu,
+  &-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 70px;
+  }
+
+  &-line {
+    position: relative;
+
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &-line::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    translate: -50%;
+    height: 2px;
+    width: 0;
+    background-color: currentColor;
+    transition-duration: inherit;
+  }
+
+  &-button {
+    @include reset-button;
+
+    color: inherit;
+  }
+}
+
+.header-bottom {
+}
