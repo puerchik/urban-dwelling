@@ -1,20 +1,44 @@
-.header__top {
-  background-color: var(--color-dark-alt);
-  color: var(--color-light);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  padding-block: 12px;
+.header {
+  &__top {
+    background-color: var(--color-dark-alt);
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding-block: 12px;
 
-  &-inner,
-  &-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 70px;
+    &-inner,
+    &-menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 70px;
+    }
+
+    &-button {
+      @include reset-button;
+
+      color: inherit;
+    }
   }
 
-  &-line {
+  &__bottom {
+    padding-block: 12px;
+
+    &-inner,
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-list {
+      justify-content: center;
+      column-gap: 100px;
+    }
+  }
+
+  &-hover-line {
     position: relative;
 
     @include hover {
@@ -24,7 +48,7 @@
     }
   }
 
-  &-line::after {
+  &-hover-line::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -35,13 +59,4 @@
     background-color: currentColor;
     transition-duration: inherit;
   }
-
-  &-button {
-    @include reset-button;
-
-    color: inherit;
-  }
-}
-
-.header-bottom {
 }
