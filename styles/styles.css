@@ -185,6 +185,8 @@ body {
   line-height: 1.4;
   color: var(--color-dark-alt);
   background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
 }
 
 a,
@@ -381,6 +383,10 @@ a {
   .search-button:active {
     box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2) inset;
   }
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .footer {

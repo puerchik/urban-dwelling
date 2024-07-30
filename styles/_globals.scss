@@ -5,6 +5,8 @@ body {
   line-height: 1.4;
   color: var(--color-dark-alt);
   background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
 }
 
 a,
