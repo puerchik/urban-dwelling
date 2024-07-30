@@ -1,0 +1,36 @@
+.card {
+  max-width: 320px;
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: var(--border-radius-card);
+
+    &:hover .card__details {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__details {
+    position: absolute;
+    bottom: 0;
+    padding: 20px 31px;
+    background-color: rgba(245, 245, 245, 0.7);
+
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 0.2s;
+  }
+
+  &__link {
+    padding: 13px 87px;
+    border-radius: var(--border-radius);
+    background: var(--color-orange);
+
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-light);
+  }
+}
