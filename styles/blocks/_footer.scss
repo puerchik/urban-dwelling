@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-alt);
+
+  &__logo {
+    &-img {
+      filter: invert(1);
+    }
+  }
+}
