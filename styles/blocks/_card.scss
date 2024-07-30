@@ -4,12 +4,15 @@
   &__wrapper {
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
 
     border-radius: var(--border-radius-card);
 
-    &:hover .card__details {
-      visibility: visible;
-      transform: translateY(0);
+    @include hover {
+      .card__details {
+        visibility: visible;
+        transform: translateY(0);
+      }
     }
   }
 
@@ -21,10 +24,11 @@
 
     visibility: hidden;
     transform: translateY(100%);
-    transition: 0.2s;
+    transition: var(--transition-duration);
   }
 
   &__link {
+    display: block;
     padding: 13px 87px;
     border-radius: var(--border-radius);
     background: var(--color-orange);
@@ -32,5 +36,42 @@
     font-size: 16px;
     font-weight: 600;
     color: var(--color-light);
+
+    @include hover {
+      background-color: #ff5e00;
+    }
+  }
+
+  &__promotion {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 40px;
+    background-color: var(--color-dark-alt);
+    border-radius: var(--border-radius);
+
+    color: var(--color-light);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+  }
+
+  &__price {
+    font-size: 22px;
+
+    &_discount {
+      color: var(--color-orange);
+    }
+
+    &_old {
+      font-weight: 600;
+      text-decoration-line: line-through;
+      color: var(--color-gray);
+    }
   }
 }

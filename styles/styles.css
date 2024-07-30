@@ -142,7 +142,7 @@ svg * {
   --border-radius-small: 89px;
   --border-radius-card: 20px;
   --font-family-base: "Lato", sans-serif;
-  --container-width: 1440px;
+  --container-width: 1400px;
   --container-padding-x: 20px;
   --transition-duration: 0.2s;
 }
@@ -399,6 +399,13 @@ a {
   font-weight: 400;
   margin-bottom: 40px;
 }
+.search-results__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
 
 .card {
   max-width: 320px;
@@ -406,11 +413,20 @@ a {
 .card__wrapper {
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
   border-radius: var(--border-radius-card);
 }
-.card__wrapper:hover .card__details {
-  visibility: visible;
-  transform: translateY(0);
+@media (hover: hover) {
+  .card__wrapper:hover .card__details {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@media (hover: none) {
+  .card__wrapper:active .card__details {
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 .card__details {
   position: absolute;
@@ -419,15 +435,52 @@ a {
   background-color: rgba(245, 245, 245, 0.7);
   visibility: hidden;
   transform: translateY(100%);
-  transition: 0.2s;
+  transition: var(--transition-duration);
 }
 .card__link {
+  display: block;
   padding: 13px 87px;
   border-radius: var(--border-radius);
   background: var(--color-orange);
   font-size: 16px;
   font-weight: 600;
   color: var(--color-light);
+}
+@media (hover: hover) {
+  .card__link:hover {
+    background-color: #ff5e00;
+  }
+}
+@media (hover: none) {
+  .card__link:active {
+    background-color: #ff5e00;
+  }
+}
+.card__promotion {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 8px 40px;
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+  color: var(--color-light);
+  font-size: 16px;
+  font-weight: 600;
+}
+.card__title {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.card__price {
+  font-size: 22px;
+}
+.card__price_discount {
+  color: var(--color-orange);
+}
+.card__price_old {
+  font-weight: 600;
+  text-decoration-line: line-through;
+  color: var(--color-gray);
 }
 
 .footer {

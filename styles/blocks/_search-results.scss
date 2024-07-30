@@ -8,4 +8,11 @@
 
     margin-bottom: 40px;
   }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+    column-gap: 40px;
+  }
 }
