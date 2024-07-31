@@ -44,6 +44,10 @@
 
     &-logo {
       margin-right: 243px;
+
+      @include desktop {
+        margin-right: 163px;
+      }
     }
 
     &-list {

@@ -2,12 +2,20 @@
   padding-top: 57px;
   padding-bottom: 61px;
 
+  @include desktop {
+    padding-bottom: 65px;
+  }
+
   &__title {
     font-family: Korataki;
     font-size: 44px;
     font-weight: 400;
 
     margin-bottom: 43px;
+
+    @include desktop {
+      font-size: 40px;
+    }
   }
 
   &__list {
@@ -15,5 +23,9 @@
     grid-template-columns: repeat(4, 1fr);
     row-gap: 50px;
     column-gap: 40px;
+
+    @include desktop {
+      gap: 29px;
+    }
   }
 }

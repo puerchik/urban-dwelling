@@ -1,6 +1,10 @@
 .card {
   max-width: 320px;
 
+  @include desktop {
+    max-width: 288px;
+  }
+
   &__wrapper {
     position: relative;
     overflow: hidden;
@@ -16,6 +20,10 @@
     }
   }
 
+  &__img {
+    height: auto;
+  }
+
   &__details {
     position: absolute;
     bottom: 0;
@@ -25,6 +33,10 @@
     visibility: hidden;
     transform: translateY(100%);
     transition: var(--transition-duration);
+
+    @include desktop {
+      padding-inline: 14px;
+    }
   }
 
   &__link {
