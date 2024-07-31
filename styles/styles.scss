@@ -1,4 +1,5 @@
 @import 'normalize', 'fonts', 'mixins', 'media', 'variables', 'utils', 'globals';
 
 @import './blocks/header', './blocks/search', './blocks/main', './blocks/search-results',
-  './blocks/card', './blocks/burger-button', './blocks/footer';
+  './blocks/card', './blocks/burger-button', './blocks/cross-button', './blocks/mobile_overlay',
+  './blocks/footer';

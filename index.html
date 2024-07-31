@@ -70,7 +70,11 @@
             </form>
             <a href="#" class="header__bottom-basket" data-count="3">Корзина</a>
           </div>
-          <button class="header__bottom-burger-button burger-button visible-tablet" type="button">
+          <button
+            class="header__bottom-burger-button burger-button visible-tablet"
+            type="button"
+            onclick="window.mobileOverlay.showModal()"
+          >
             <span class="visually-hidden">Open navigation menu</span>
           </button>
         </div>
@@ -335,5 +339,38 @@
         </div>
       </div>
     </footer>
+
+    <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Каталог </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> О компании </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Контакты </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Доставка и оплата </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Гарантия и возврат </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Корзина </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a href="#" class="mobile-overlay__link"> Поиск </a>
+        </li>
+      </ul>
+      <button
+        class="header__modal-close-button cross-button"
+        type="button"
+        onclick="window.mobileOverlay.close()"
+      >
+        <span class="visually-hidden">Close</span>
+      </button>
+    </dialog>
   </body>
 </html>
