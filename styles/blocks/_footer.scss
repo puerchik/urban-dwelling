@@ -4,8 +4,8 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
-    padding-block: 60px;
+
+    padding-block: 61px;
   }
 
   &__privacy {
@@ -13,6 +13,7 @@
     flex-direction: column;
     row-gap: 53px;
     max-width: 330px;
+    margin-right: 104px;
 
     &-info {
       color: var(--color-gray);
@@ -41,6 +42,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 38px;
+    margin-right: 147px;
 
     &-address {
       font-style: normal;
@@ -58,6 +60,10 @@
       font-size: 18px;
       line-height: 1;
     }
+  }
+
+  &__services {
+    margin-right: 192px;
   }
 
   &__list {
@@ -85,7 +91,7 @@
   &__legal {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 21px;
 
     &-link {
       color: var(--color-gray);
@@ -105,6 +111,7 @@
 
   &__payment {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     column-gap: 33px;
   }
