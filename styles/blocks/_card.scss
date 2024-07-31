@@ -5,6 +5,10 @@
     max-width: 288px;
   }
 
+  @include tablet {
+    max-width: 320px;
+  }
+
   &__wrapper {
     position: relative;
     overflow: hidden;

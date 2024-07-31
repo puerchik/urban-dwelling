@@ -70,6 +70,9 @@
             </form>
             <a href="#" class="header__bottom-basket" data-count="3">Корзина</a>
           </div>
+          <button class="header__bottom-burger-button burger-button visible-mobile" type="button">
+            <span class="visually-hidden">Open navigation menu</span>
+          </button>
         </div>
       </div>
     </header>
@@ -244,7 +247,7 @@
           </p>
         </div>
         <div class="footer__location">
-          <div class="footer__info">
+          <div class="footer__info footer__info-address">
             <h3 class="footer__info-title">Адрес</h3>
             <ul class="footer__list">
               <li class="footer__list-item">
@@ -252,7 +255,7 @@
               </li>
             </ul>
           </div>
-          <div class="footer__info">
+          <div class="footer__info footer__info-contacts">
             <h3 class="footer__info-title">Контакты</h3>
             <ul class="footer__list footer__list_contacts">
               <li class="footer__list-item">
@@ -269,7 +272,7 @@
           </div>
         </div>
         <div class="footer__services">
-          <div class="footer__info">
+          <div class="footer__info footer__info-services">
             <h3 class="footer__info-title">Услуги</h3>
             <nav class="footer__menu">
               <ul class="footer__list">
@@ -293,8 +296,10 @@
           </div>
         </div>
         <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Публичная оферта</a>
-          <a href="#" class="footer__legal-link">Политика персональных данных</a>
+          <div class="footer__legal-personal">
+            <a href="#" class="footer__legal-link">Публичная оферта</a>
+            <a href="#" class="footer__legal-link">Политика персональных данных</a>
+          </div>
           <ul class="footer__payment">
             <li class="footer__payment-item">
               <img

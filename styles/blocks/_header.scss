@@ -42,6 +42,10 @@
   &__bottom {
     padding-block: 12px;
 
+    @include tablet {
+      padding-block: 10px;
+    }
+
     &-inner {
       display: flex;
       align-items: center;
@@ -55,10 +59,23 @@
         grid-template-areas: 'logo controls' 'menu menu';
         row-gap: 20px;
       }
+
+      @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     &-logo {
       margin-right: 243px;
+
+      &-img {
+        @include tablet {
+          width: 141px;
+          height: 36px;
+        }
+      }
 
       @include desktop {
         margin-right: 163px;

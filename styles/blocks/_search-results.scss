@@ -6,6 +6,11 @@
     padding-bottom: 65px;
   }
 
+  @include tablet {
+    padding-top: 47px;
+    padding-bottom: 51px;
+  }
+
   &__title {
     font-family: Korataki;
     font-size: 44px;
@@ -15,6 +20,10 @@
 
     @include desktop {
       font-size: 40px;
+    }
+
+    @include tablet {
+      font-size: 32px;
     }
   }
 
@@ -26,6 +35,12 @@
 
     @include desktop {
       gap: 29px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      row-gap: 50px;
     }
   }
 }

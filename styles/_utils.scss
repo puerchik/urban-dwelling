@@ -6,6 +6,11 @@
   @include desktop {
     --container-width: 1240px;
   }
+
+  @include tablet {
+    --container-width: 680px;
+    --container-padding-x: 44px;
+  }
 }
 
 .visually-hidden {
