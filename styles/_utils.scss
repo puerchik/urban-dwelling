@@ -11,6 +11,11 @@
     --container-width: 680px;
     --container-padding-x: 44px;
   }
+
+  @include mobile {
+    --container-width: 320px;
+    --container-padding-x: 35px;
+  }
 }
 
 .visually-hidden {

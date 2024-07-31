@@ -46,6 +46,10 @@
       padding-block: 10px;
     }
 
+    @include mobile {
+      padding-block: 7px;
+    }
+
     &-inner {
       display: flex;
       align-items: center;

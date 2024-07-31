@@ -14,9 +14,21 @@
         'footer-logo footer-logo footer-logo'
         'address contacts services'
         'payment privacy privacy';
+      padding-block: 42px;
+      row-gap: 42px;
     }
-    padding-block: 42px;
-    row-gap: 42px;
+
+    @include mobile {
+      padding-block: 33px;
+      grid-template-areas:
+        'footer-logo'
+        'address'
+        'contacts'
+        'services'
+        'payment'
+        'privacy';
+      row-gap: 30px;
+    }
   }
 
   &__privacy {
@@ -44,6 +56,11 @@
 
       @include tablet {
         padding-left: 53px;
+        grid-area: privacy;
+      }
+
+      @include mobile {
+        padding-left: 0;
       }
 
       &-address {
@@ -56,10 +73,6 @@
         @include tablet {
           grid-area: contacts;
         }
-      }
-
-      @include tablet {
-        grid-area: privacy;
       }
     }
 
@@ -86,6 +99,10 @@
       grid-area: footer-logo;
       width: 180px;
       height: 47px;
+    }
+
+    @include mobile {
+      margin-bottom: 12px;
     }
   }
 
@@ -116,10 +133,20 @@
     flex-direction: column;
     row-gap: 20px;
 
+    @include mobile {
+      row-gap: 10px;
+    }
+
     &-title {
       color: var(--color-light);
       font-size: 18px;
       line-height: 1;
+    }
+
+    &-services {
+      @include mobile {
+        row-gap: 19px;
+      }
     }
   }
 
@@ -136,6 +163,10 @@
       justify-self: end;
       margin-right: 0;
     }
+
+    @include mobile {
+      justify-self: start;
+    }
   }
 
   &__list {
@@ -145,6 +176,10 @@
 
     @include tablet {
       row-gap: 30px;
+    }
+
+    @include mobile {
+      row-gap: 20px;
     }
 
     &-item {
@@ -174,6 +209,11 @@
       align-items: flex-start;
       margin-top: -149px;
       row-gap: 97px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+      row-gap: 73px;
     }
 
     &-personal {
