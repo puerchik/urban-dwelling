@@ -1,11 +1,18 @@
 .search {
   position: relative;
 
+  @include desktop {
+    &:focus-within {
+      .search-icon {
+        right: 0;
+      }
+    }
+  }
+
   &-input {
     max-width: 170px;
     border: 1px solid var(--color-light-alt);
     border-radius: var(--border-radius-small);
-    border-color: black;
     padding: 10px 21px;
     padding-right: 37px;
     color: var(--color-dark-alt);
@@ -13,6 +20,10 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1;
+
+    &:focus {
+      border-color: var(--color-dark-alt);
+    }
 
     &[type='search']::-webkit-search-cancel-button {
       -webkit-appearance: none;
@@ -32,11 +43,24 @@
       background-color: var(--color-light-alt);
       border-color: var(--color-gray);
     }
+
+    @include desktop {
+      width: 0;
+      padding: 0;
+      border: none;
+
+      &:focus,
+      &:active {
+        width: 100%;
+        border: 1px solid var(--color-dark-alt);
+        padding: 10px 21px;
+        padding-right: 49px;
+        outline: none;
+      }
+    }
   }
 
-  &-button {
-    @include reset-button;
-
+  &-icon {
     position: absolute;
 
     display: flex;
@@ -52,10 +76,12 @@
 
     border-radius: var(--border-radius-small);
 
-    @include hover {
-      -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2) inset;
-      -moz-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2) inset;
-      box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.2) inset;
+    @include desktop {
+      background-color: var(--color-dark-alt);
+
+      & svg *[fill] {
+        fill: var(--color-light);
+      }
     }
   }
 }

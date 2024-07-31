@@ -11,7 +11,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__top">
+      <div class="header__top hidden-tablet">
         <div class="header__top-inner container">
           <nav class="header__top-menu">
             <a href="#" class="header__top-link">Доставка и оплата</a>
@@ -32,7 +32,7 @@
               loading="lazy"
             />
           </a>
-          <nav class="header__bottom-menu">
+          <nav class="header__bottom-menu hidden-tablet">
             <ul class="header__bottom-list">
               <li class="header__bottom-item">
                 <a href="#" class="header__bottom-link">Каталог</a>
@@ -45,10 +45,10 @@
               </li>
             </ul>
           </nav>
-          <div class="header__bottom-controls">
+          <div class="header__bottom-controls hidden-tablet">
             <form class="header__bottom-form search">
-              <input class="search-input" placeholder="Search" type="search" />
-              <button class="search-button" type="submit">
+              <input class="search-input" placeholder="Search" type="search" id="search-input-id" />
+              <label class="search-icon" for="search-input-id">
                 <span class="visually-hidden">search</span>
                 <svg
                   width="22"
@@ -66,7 +66,7 @@
                     fill="#231815"
                   />
                 </svg>
-              </button>
+              </label>
             </form>
             <a href="#" class="header__bottom-basket" data-count="3">Корзина</a>
           </div>
