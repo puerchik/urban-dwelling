@@ -445,7 +445,10 @@ a {
 }
 @media (max-width: 1601px) {
   .search:focus-within .search-icon {
-    right: 0;
+    background-color: transparent;
+  }
+  .search:focus-within .search-icon svg *[fill] {
+    fill: var(--color-dark-alt);
   }
 }
 .search-input {
@@ -495,7 +498,7 @@ a {
     width: 100%;
     border: 1px solid var(--color-dark-alt);
     padding: 10px 21px;
-    padding-right: 49px;
+    padding-right: 39px;
     outline: none;
   }
 }

@@ -4,7 +4,11 @@
   @include desktop {
     &:focus-within {
       .search-icon {
-        right: 0;
+        background-color: transparent;
+
+        & svg *[fill] {
+          fill: var(--color-dark-alt);
+        }
       }
     }
   }
@@ -54,7 +58,7 @@
         width: 100%;
         border: 1px solid var(--color-dark-alt);
         padding: 10px 21px;
-        padding-right: 49px;
+        padding-right: 39px;
         outline: none;
       }
     }
