@@ -86,10 +86,6 @@
   }
 
   &__logo {
-    &-img {
-      filter: invert(1);
-    }
-
     @include desktop {
       width: 217px;
       height: 56px;
