@@ -868,7 +868,7 @@ a {
     row-gap: 42px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 650px) {
   .footer__inner {
     padding-block: 33px;
     grid-template-areas: "footer-logo" "address" "contacts" "services" "payment" "privacy";
@@ -906,7 +906,7 @@ a {
     grid-area: privacy;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 650px) {
   .footer__privacy-info {
     padding-left: 0;
   }
@@ -1005,7 +1005,7 @@ a {
     margin-right: 0;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 650px) {
   .footer__services {
     justify-self: start;
   }
@@ -1057,7 +1057,7 @@ a {
     row-gap: 97px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 650px) {
   .footer__legal {
     margin-top: 0;
     row-gap: 73px;

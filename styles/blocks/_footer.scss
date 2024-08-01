@@ -18,7 +18,7 @@
       row-gap: 42px;
     }
 
-    @include mobile {
+    @include tablet-medium {
       padding-block: 33px;
       grid-template-areas:
         'footer-logo'
@@ -59,7 +59,7 @@
         grid-area: privacy;
       }
 
-      @include mobile {
+      @include tablet-medium {
         padding-left: 0;
       }
 
@@ -156,7 +156,7 @@
       margin-right: 0;
     }
 
-    @include mobile {
+    @include tablet-medium {
       justify-self: start;
     }
   }
@@ -204,7 +204,7 @@
       row-gap: 97px;
     }
 
-    @include mobile {
+    @include tablet-medium {
       margin-top: 0;
       row-gap: 73px;
       margin-left: 0;
