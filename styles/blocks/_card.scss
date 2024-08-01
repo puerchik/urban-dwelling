@@ -39,6 +39,7 @@
   &__details {
     position: absolute;
     bottom: 0;
+    width: 100%;
     padding: 20px 31px;
     background-color: rgba(245, 245, 245, 0.7);
 
@@ -53,14 +54,19 @@
     @include tablet {
       padding-inline: 32px;
     }
+
+    @include mobile {
+      padding-inline: 0;
+    }
   }
 
   &__link {
     display: block;
-    padding: 13px 87px;
+    padding-block: 13px;
+    text-align: center;
     border-radius: var(--border-radius);
     background: var(--color-orange);
-
+    width: 100%;
     font-size: 16px;
     font-weight: 600;
     color: var(--color-light);

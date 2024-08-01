@@ -82,49 +82,49 @@ svg * {
 }
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Regular.woff2") format("woff2");
+  src: url("./../fonts/Lato-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Bold.woff2") format("woff2");
+  src: url("./../fonts/Lato-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-Medium.woff2") format("woff2");
+  src: url("./../fonts/Lato-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato-SemiBold.woff2") format("woff2");
+  src: url("./../fonts/Lato-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("./../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Korataki";
-  src: url("/fonts/Korataki.woff2") format("woff2");
+  src: url("./../fonts/Korataki.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  src: url("./../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -198,7 +198,7 @@ svg * {
 }
 
 body {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.4;
@@ -422,7 +422,7 @@ a {
   aspect-ratio: 1;
   background-color: var(--color-light);
   border-radius: 50%;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.4;
@@ -547,7 +547,7 @@ a {
   }
 }
 .search-results__title {
-  font-family: Korataki;
+  font-family: Korataki, sans-serif;
   font-size: 44px;
   font-weight: 400;
   margin-bottom: 43px;
@@ -635,6 +635,7 @@ a {
 .card__details {
   position: absolute;
   bottom: 0;
+  width: 100%;
   padding: 20px 31px;
   background-color: rgba(245, 245, 245, 0.7);
   visibility: hidden;
@@ -651,11 +652,18 @@ a {
     padding-inline: 32px;
   }
 }
+@media (max-width: 391px) {
+  .card__details {
+    padding-inline: 0;
+  }
+}
 .card__link {
   display: block;
-  padding: 13px 87px;
+  padding-block: 13px;
+  text-align: center;
   border-radius: var(--border-radius);
   background: var(--color-orange);
+  width: 100%;
   font-size: 16px;
   font-weight: 600;
   color: var(--color-light);
@@ -988,12 +996,6 @@ a {
 }
 .footer__services {
   min-width: 140px;
-  margin-right: 189px;
-}
-@media (max-width: 1601px) {
-  .footer__services {
-    margin-right: 135px;
-  }
 }
 @media (max-width: 771px) {
   .footer__services {
@@ -1045,6 +1047,7 @@ a {
   flex-direction: column;
   row-gap: 73px;
   min-width: 245px;
+  margin-left: auto;
 }
 @media (max-width: 771px) {
   .footer__legal {
@@ -1057,6 +1060,7 @@ a {
   .footer__legal {
     margin-top: 0;
     row-gap: 73px;
+    margin-left: 0;
   }
 }
 .footer__legal-personal {

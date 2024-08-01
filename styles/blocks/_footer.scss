@@ -152,11 +152,6 @@
 
   &__services {
     min-width: 140px;
-    margin-right: 189px;
-
-    @include desktop {
-      margin-right: 135px;
-    }
 
     @include tablet {
       grid-area: services;
@@ -204,6 +199,7 @@
     flex-direction: column;
     row-gap: 73px;
     min-width: 245px;
+    margin-left: auto;
 
     @include tablet {
       align-items: flex-start;
@@ -214,6 +210,7 @@
     @include mobile {
       margin-top: 0;
       row-gap: 73px;
+      margin-left: 0;
     }
 
     &-personal {
